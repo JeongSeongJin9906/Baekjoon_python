@@ -46,10 +46,10 @@ while True:
 
     # 계산 수행
     k = find_largest_index_less_than(prime_num, a)
-    u = 10
+    u = 11.5
 
     while True:
-        u = 2 * u + 3
+        u = int(2 * u + 1)
         try:
             if k // 2 - u <= 0:
                 j = find_largest_index_less_than(prime_num, a // 2)

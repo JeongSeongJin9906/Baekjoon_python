@@ -58,14 +58,14 @@ if root==number2:
     print(sum)
 elif len(linkedlist_instance.nodes[number2].father.son)-len(linkedlist_instance.nodes[number2].son)==1:
     sum=sum+1
-    total=set(linkedlist_instance.nodes[root].son)-{number2}
-    erase=set(linkedlist_instance.nodes[number2].son)
+    total=linkedlist_instance.nodes[root].son-{number2}
+    erase=linkedlist_instance.nodes[number2].son
     for i in total-erase:
         sum=sum+linkedlist_instance.nodes[i].key
     print(sum)
 else:
-    total=set(linkedlist_instance.nodes[root].son)-{number2}
-    erase=set(linkedlist_instance.nodes[number2].son)
+    total=(linkedlist_instance.nodes[root].son)-{number2}
+    erase=linkedlist_instance.nodes[number2].son
     for i in total-erase:
         sum=sum+linkedlist_instance.nodes[i].key
     print(sum)
